@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/password-generator/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!---->
+        <div class="header">
+            <h1>Welcome To Password Generator</h1>
+            <label class="Password"></label>
+        </div>
+        <!---->
+        <div class="preferences">
+            <form class="form">
+                <div class="range">
+                    <label for="rangeBar" id="rangeBar">
+                        <input type="range" value="9" min="0" max="30" oninput="rangevalue.value=value" />
+                        <output id="rangevalue">9</output>
+                    </label>
+                </div>
+                <div>
+                    <label for="character" class="character">
+                        <span>Include Character</span>
+                        <input type="checkbox" id="character" onclick="preferences1()">
+                    </label>
+                </div>
+                <div>
+                    <label for="Specialcharacter" class="Specialcharacter">
+                        <span>Include Special Character</span>
+                        <input type="checkbox" id="Specialcharacter" onclick="preferences2()">
+                    </label>
+                </div>
+                <div>
+                    <label for="number" class="number">
+                        <span>Include Number</span>
+                        <input type="checkbox" id="number" onclick="preferences3()">
+                    </label>
+                </div>
+
+            </form>
+        </div>
+        <!---->
+        <div class="footer">
+            <button class="generate" onclick="generatePassword()">Generate the Password</button>
+        </div>
+    </div>
+    <script src="/password-generator/script.js"></script>
+</body>
+
+</html>
